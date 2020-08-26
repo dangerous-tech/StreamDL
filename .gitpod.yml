@@ -1,6 +1,6 @@
 image:
-  file: Dockerfile
+  file: .gitpod.Dockerfile
 
 tasks:
-  - init: poetry run pytest -v
-    command:  poetry run bandit streamdl.py
+  - init: poetry install
+    command:  poetry run streamdl.py -h
