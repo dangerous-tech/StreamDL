@@ -2,5 +2,4 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: poetry install
-    command: poetry run streamdl.py -h
+  - command: poetry run streamdl.py -h
