@@ -1,6 +1,6 @@
 image:
-  file: .gitpod.Dockerfile
+  file: Dockerfile
 
 tasks:
   - init: poetry install
-    command: poetry run pytest -v && poetry run bandit streamdl.py
+    command: poetry run python streamdl.py -c config.yml -o /app/dl/ -m /app/out/ -r "$REPEAT_TIME" -l stdout -ll "$LOG_LEVEL"
