@@ -2,5 +2,5 @@ image:
   file: Dockerfile
 
 tasks:
-  - init: poetry install
-    command: poetry run pytest -v && poetry run bandit streamdl.py
+  - init: poetry run pytest -v
+    command:  poetry run bandit streamdl.py
